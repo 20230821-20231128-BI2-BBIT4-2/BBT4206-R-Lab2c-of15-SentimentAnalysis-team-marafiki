@@ -430,7 +430,7 @@ head(evaluation_likes_and_wishes, 10)
 # Function to remove special characters and convert all text to a standard
 # lower case
 remove_special_characters <- function(doc) {
-  gsub("[^a-zA-Z0-9 ]", "", doc, ignore.case = TRUE)
+  gsub("[^a-zA-Z ]", "", doc, ignore.case = TRUE)
 }
 
 evaluation_likes_and_wishes$Likes <- sapply(evaluation_likes_and_wishes$Likes,
