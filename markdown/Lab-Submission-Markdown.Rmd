@@ -1,7 +1,7 @@
 ---
 title: "Business Intelligence Lab Submission Markdown"
-author: "<Specify your group name here>"
-date: "<Specify the date when you submitted the lab>"
+author: "Team Marafiki"
+date: "<12/10/2023>"
 output:
   github_document: 
     toc: yes
@@ -18,17 +18,17 @@ editor_options:
 +---------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | **Student ID Numbers and Names of Group Members** | *\<list one student name, group, and ID per line; you should be between 2 and 5 members per group\>* |
 |                                                   |                                                                                                      |
-|                                                   | 1.  ID - Group - Name                                                                                |
+|                                                   | 1.  136446 - C - Mirav Bhojani                                                                               |
 |                                                   |                                                                                                      |
-|                                                   | 2.  ID - Group - Name                                                                                |
+|                                                   | 2.  136788 - C - Nyaga Derrick                                                                                |
 |                                                   |                                                                                                      |
-|                                                   | 3.  ID - Group - Name                                                                                |
+|                                                   | 3.  136709 - C - Jane Mugo                                                                                |
 |                                                   |                                                                                                      |
-|                                                   | 4.  ID - Group - Name                                                                                |
+|                                                   | 4.  135399 - C - Sheila Kavinya                                                                               |
 |                                                   |                                                                                                      |
-|                                                   | 5.  ID - Group - Name                                                                                |
+|                                                   | 5.  136895 - C - Wesley Wanyama                                                                                |
 +---------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| **GitHub Classroom Group Name**                   |                                                                                                      |
+| **GitHub Classroom Group Name**                   |   Team Marafiki                                                                                                   |
 +---------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | **Course Code**                                   | BBT4206                                                                                              |
 +---------------------------------------------------+------------------------------------------------------------------------------------------------------+
@@ -66,40 +66,22 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, eval = TRUE,
 > editor_options:\
 > chunk_output_type: console
 
-# \<Provide an Appropriate Title Here\>
+# \<Explanatory Analysis\>
 
-Describe the code chunk here:
+Describe the code chunk here: Sentiment analysis was performed both on the like and the wishes. This involved categorizing words into sentiments like positive, negative, or neutral.
 
-```{r Your Second Code Chunk}
+```{rename(Likes = `Likes`) %>% # nolint rename(Wishes = `Dislikes`) %>% # nolintk}
 # Fill this with R related code that will be executed when the R markdown file
 # is rendered using knitR
 library(readr)
 ```
 
-Describe the next code chunk here:
+Describe the next code chunk here: Average gender wise evaluation rating was also done 
 
-```{r Your Third Code Chunk}
+```{mutate(`Student's Gender` = ifelse(Gender == 1, "Male", "Female")) %>% }
 # Fill this with other R related code that will be executed when the R markdown
 # file is rendered using knitR
 library(readr)
 ```
 
-## \<You Can Have a Sub-Title Here\>
 
-```{r Your Fourth Code Chunk}
-# Fill this with other R related code that will be executed when the R markdown
-# file is rendered using knitR
-library(readr)
-```
-
-# \<You can Provide Another Appropriate Title Here\>
-
-Describe the code chunk here:
-
-```{r Your Fifth Code Chunk}
-# Fill this with R related code that will be executed when the R markdown file
-# is rendered using knitR
-library(readr)
-```
-
-**etc.** as per the lab submission requirements.
